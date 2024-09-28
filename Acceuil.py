@@ -1,5 +1,5 @@
 import customtkinter as ctk
-#from tkinter import *
+from tkinter import *
 from subprocess import call
 
 bg = "#483D8B"
