@@ -24,7 +24,8 @@ root.resizable(False, False)
 titre = ctk.CTkLabel(root,
                      text="GESTIONNAIRES DES ACHATS ET VENTES",
                      font=("sans serif", 25, 'bold'), 
-                     bg_color=bg
+                     bg_color="#808080",
+
 )
 titre.place(x=45, y=20)
 
