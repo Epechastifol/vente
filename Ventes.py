@@ -34,6 +34,10 @@ def Ajouter():
         prix_enter.delete(0, END)
         quantite_enter.delete(0, END)
         
+        root.destroy()
+
+        call(["python", "Ventes.py"])
+
     except Exception as e:
        print(e)
        #retour de la base
@@ -54,6 +58,10 @@ def Effacer():
         mabase.commit()
         dernierId = moncursor.lastrowid
         messagebox.showinfo("Attention", "Voullez-vous supprimer ? cette action est irreversible")
+
+        root.destroy()
+
+        call(["python", "Ventes.py"])
 
     except Exception as e:
         print(e)
