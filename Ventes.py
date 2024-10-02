@@ -48,8 +48,9 @@ def Effacer():
     moncursor = mabase.cursor()
 
     try:
-        sql = "delete from ventes where num_vente = num_vente"
-        moncursor.execute(sql)
+        sql = "delete from ventes where num_vente = %s"
+        val = (num_vente,)
+        moncursor.execute(sql, val)
         mabase.commit()
         dernierId = moncursor.lastrowid
         messagebox.showinfo("Attention", "Voullez-vous supprimer ? cette action est irreversible")
